@@ -1,4 +1,4 @@
-Syy<-function(Y,n){
+Syy.f<-function(Y,n){
   sumyy<-0;
   Y.mean<-mean(Y);
   for(i in 1:n){    

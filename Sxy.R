@@ -1,4 +1,4 @@
-Sxy<-function(X,Y,n){
+Sxy.f<-function(X,Y,n){
   sumxy<-0;
   X.mean<-mean(X);
   Y.mean<-mean(Y);  

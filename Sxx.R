@@ -1,4 +1,4 @@
-Sxx<-function(X,n){
+Sxx.f<-function(X,n){
   sumxx<-0;
   X.mean<-mean(X);
   for(i in 1:n){    
