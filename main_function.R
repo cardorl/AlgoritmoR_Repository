@@ -260,15 +260,17 @@ inv.Sigma.teta5.teta4.hat<--2*(inv.sigma.hat.teta4*sigma.hat.teta5*inv.sigma.hat
 inv.Sigma.teta5.teta5.hat<--2*(inv.sigma.hat.teta5*sigma.hat.teta5*inv.sigma.hat)-(inv.sigma.hat*sigma.hat.teta5.teta5*inv.sigma.hat);
 
 #### Decomposição de Choleski da matriz Sigma estimada e sua inversa
-
 p.11.hat<-p.11.hat.f(beta.hat,sigma2.x.hat,sigma2.u.hat,lambda.e);
-p.12.hat<-
-p.21.hat<-
-p.22.hat<-
-P.hat<-
-Inv.P.hat<-
+p.12.hat<-0
+p.21.hat<-p.21.hat.f(beta.hat,sigma2.x.hat,p.11.hat);
+p.22.hat<-p.22.hat.f(beta.hat,sigma2.x.hat,sigma2.u.hat,p.11.hat);
 
-return(inv.sigma.hat.teta1);
-return(inv.Sigma.teta1.teta1.hat);
+p.hat<-matrix(data=rbind(p.11.hat,p.12.hat,p.21.hat,p.22.hat),ncol=2);
+inv.P.hat<-solve(p.hat);
+
+
+
+return(P.hat);
+
 }
   
