@@ -1,5 +1,15 @@
+#### Universidade de São Paulo ###
+#### Trabalho de Conclusão do Curso de Sistemas de Informação ###
+#### Implementação de algoritmo de ajuste para a estatística da razão de verossimilhança no software R ###
+#### Ricardo Lemos Cardoso NºUSP 5365160 ###
+
+
+
+#### Função Principal que recebe dois vetores X e Y e o tamanho n desses vetores ###
 main<-function(X,Y,n){
 
+  
+#### Parâmetros Pré-Estabelecidos
 beta.0<-1;
 lambda.e<-1;
 
@@ -268,9 +278,15 @@ p.22.hat<-p.22.hat.f(beta.hat,sigma2.x.hat,sigma2.u.hat,p.11.hat);
 p.hat<-matrix(data=rbind(p.11.hat,p.12.hat,p.21.hat,p.22.hat),ncol=2);
 inv.P.hat<-solve(p.hat);
 
+#### Derivadas da matriz de decomposição de Choleski de Sigma estimada
+p.hat.teta1<-p.hat.teta1.f(p.11.hat,p.21.hat,p.22.hat,sigma2.x.hat,sigma2.u.hat,lambda.e);
+#p.hat.teta2<-
+#p.hat.teta3<-
+p.hat.teta4<-p.hat.teta4.f(beta.hat,p.11.hat,p.22.hat,sigma2.x.hat,sigma2.u.hat,lambda.e);
+p.hat.teta5<-
 
-
-return(P.hat);
+###Trecho do código ainda não implementado
+  
 
 }
   
