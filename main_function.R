@@ -99,6 +99,10 @@ sigma.hat.teta4<-matrix(data=cbind(beta.hat^2,beta.hat,beta.hat,1),ncol=2);
 sigma.hat.teta5<-matrix(data=cbind(lambda.e,0,0,1),ncol=2);
 
 #### Segundas derivadas: Matriz de covariâncias estimada
+
+##Array para guardar as matrizes de covariâncias estimada
+sigma.hat.tetax.tetay<-vector("list",25)
+
 sigma.hat.teta1.teta1<-matrix(data=cbind(2*sigma2.x.hat,0,0,0),ncol=2);
 sigma.hat.teta1.teta2<-matrix(data=cbind(0,0,0,0),ncol=2);
 sigma.hat.teta1.teta3<-matrix(data=cbind(0,0,0,0),ncol=2);
@@ -128,6 +132,8 @@ sigma.hat.teta5.teta2<-matrix(data=cbind(0,0,0,0),ncol=2);
 sigma.hat.teta5.teta3<-matrix(data=cbind(0,0,0,0),ncol=2);
 sigma.hat.teta5.teta4<-matrix(data=cbind(0,0,0,0),ncol=2);
 sigma.hat.teta5.teta5<-matrix(data=cbind(0,0,0,0),ncol=2);
+
+
 
 #### Primeiras derivadas: Inversa da matriz de covariâncias estimada
 inv.sigma.hat.teta1<-(-(inv.sigma.hat))*sigma.hat.teta1*inv.sigma.hat;
@@ -280,12 +286,36 @@ inv.P.hat<-solve(p.hat);
 
 #### Derivadas da matriz de decomposição de Choleski de Sigma estimada
 p.hat.teta1<-p.hat.teta1.f(p.11.hat,p.21.hat,p.22.hat,sigma2.x.hat,sigma2.u.hat,lambda.e);
-#p.hat.teta2<-
-#p.hat.teta3<-
+p.hat.teta2<-matrix(data=rbind(0,0,0,0),ncol=2);
+p.hat.teta3<-matrix(data=rbind(0,0,0,0),ncol=2);
 p.hat.teta4<-p.hat.teta4.f(beta.hat,p.11.hat,p.22.hat,sigma2.x.hat,sigma2.u.hat,lambda.e);
-p.hat.teta5<-
+p.hat.teta5<-p.hat.teta5.f(beta.hat,p.11.hat,p.21.hat,p.22.hat,sigma2.x.hat,lambda.e);
 
-###Trecho do código ainda não implementado
+
+
+#### Matrizes úteis na composição da matriz J.hat e l.hat.linha
+T.hat<-
+B.hat<-
+C.hat<-
+Q.hat<-
+M.hat<-
+R.hat<-
+V.hat<-
+W.hat<-
+  
+#### Matrizes úteis na composição da matriz J.til e l.til.linha e U.linha.til
+T.til<-
+B.til<-
+C.til<-
+Q.til<-
+M.til<-
+R.til<-
+V.til<-
+W.til<-
+
+
+
+cbind(p.hat.teta5);
   
 
 }
