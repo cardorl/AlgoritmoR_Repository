@@ -315,7 +315,7 @@ W.til<-
 
 
 
-cbind(p.hat.teta5);
+cbind(p.hat.teta5)
   
 
 }
