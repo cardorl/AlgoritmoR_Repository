@@ -294,28 +294,48 @@ p.hat.teta5<-p.hat.teta5.f(beta.hat,p.11.hat,p.21.hat,p.22.hat,sigma2.x.hat,lamb
 
 
 #### Matrizes úteis na composição da matriz J.hat e l.hat.linha
-T.hat<-
-B.hat<-
-C.hat<-
-Q.hat<-
-M.hat<-
-R.hat<-
-V.hat<-
-W.hat<-
+#T.hat<-
+#B.hat<-
+#C.hat<-
+#Q.hat<-
+#M.hat<-
+R.hat<-R.hat.f(n);
+V.hat<-V.hat,f(n);
+#W.hat<-
+p.hat.teta1
+p.hat.teta2
+p.hat.teta3
+p.hat.teta4
+p.hat.teta5
+
+mu.hat.teta1
+mu.hat.teta2
+mu.hat.teta3
+mu.hat.teta4
+mu.hat.teta5
+
+
+inv.sigma.hat
+p.hat
+inv.P.hat
+X e Y
+
   
 #### Matrizes úteis na composição da matriz J.til e l.til.linha e U.linha.til
-T.til<-
-B.til<-
-C.til<-
-Q.til<-
-M.til<-
-R.til<-
-V.til<-
-W.til<-
+#T.til<-
+#B.til<-
+#C.til<-
+#Q.til<-
+#M.til<-
+R.til<-R.til.f(n);
+V.til<-V.til.f(n);
+#W.til<-
+
+inv.sigma.til
 
 
 
-cbind(p.hat.teta5)
+cbind(R.hat)
   
 
 }
