@@ -331,7 +331,7 @@ R.til<-R.til.f(n);
 V.til<-V.til.f(n);
 #W.til<-
 
-inv.sigma.til
+inv.sigma.tile.
 
 
 
