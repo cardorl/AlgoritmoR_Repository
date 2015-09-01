@@ -294,25 +294,47 @@ p.hat.teta5<-p.hat.teta5.f(beta.hat,p.11.hat,p.21.hat,p.22.hat,sigma2.x.hat,lamb
 
 
 #### Matrizes úteis na composição da matriz J.hat e l.hat.linha
-#T.hat<-
+T.hat<-matrix(nrow=5,ncol=5);
+T.hat[1][1]<-tr(Inv.Sigma.hat.teta1*Sigma.hat.teta1)+tr(inv.sigma.hat*Sigma.hat.teta1.teta1);
+T.hat[1][2]<-tr(Inv.Sigma.hat.teta2*Sigma.hat.teta1)+tr(inv.sigma.hat*Sigma.hat.teta1.teta2);
+T.hat[1][3]<-tr(Inv.Sigma.hat.teta3*Sigma.hat.teta1)+tr(inv.sigma.hat*Sigma.hat.teta1.teta3);
+T.hat[1][4]<-tr(Inv.Sigma.hat.teta4*Sigma.hat.teta1)+tr(inv.sigma.hat*Sigma.hat.teta1.teta4);
+T.hat[1][5]<-tr(Inv.Sigma.hat.teta5*Sigma.hat.teta1)+tr(inv.sigma.hat*Sigma.hat.teta1.teta5);
+T.hat[2][1]<-tr(Inv.Sigma.hat.teta1*Sigma.hat.teta2)+tr(inv.sigma.hat*Sigma.hat.teta2.teta1);
+T.hat[2][2]<-tr(Inv.Sigma.hat.teta2*Sigma.hat.teta2)+tr(inv.sigma.hat*Sigma.hat.teta2.teta2);
+T.hat[2][3]<-tr(Inv.Sigma.hat.teta3*Sigma.hat.teta2)+tr(inv.sigma.hat*Sigma.hat.teta2.teta3);
+T.hat[2][4]<-tr(Inv.Sigma.hat.teta4*Sigma.hat.teta2)+tr(inv.sigma.hat*Sigma.hat.teta2.teta4);
+T.hat[2][5]<-tr(Inv.Sigma.hat.teta5*Sigma.hat.teta2)+tr(inv.sigma.hat*Sigma.hat.teta2.teta5);
+T.hat[3][1]<-tr(Inv.Sigma.hat.teta1*Sigma.hat.teta3)+tr(inv.sigma.hat*Sigma.hat.teta3.teta1);
+T.hat[3][2]<-tr(Inv.Sigma.hat.teta2*Sigma.hat.teta3)+tr(inv.sigma.hat*Sigma.hat.teta3.teta2);
+T.hat[3][3]<-tr(Inv.Sigma.hat.teta3*Sigma.hat.teta3)+tr(inv.sigma.hat*Sigma.hat.teta3.teta3);
+T.hat[3][4]<-tr(Inv.Sigma.hat.teta4*Sigma.hat.teta3)+tr(inv.sigma.hat*Sigma.hat.teta3.teta4);
+T.hat[3][5]<-tr(Inv.Sigma.hat.teta5*Sigma.hat.teta3)+tr(inv.sigma.hat*Sigma.hat.teta3.teta5);
+T.hat[4][1]<-tr(Inv.Sigma.hat.teta1*Sigma.hat.teta4)+tr(inv.sigma.hat*Sigma.hat.teta4.teta1);
+T.hat[4][2]<-tr(Inv.Sigma.hat.teta2*Sigma.hat.teta4)+tr(inv.sigma.hat*Sigma.hat.teta4.teta2);
+T.hat[4][3]<-tr(Inv.Sigma.hat.teta3*Sigma.hat.teta4)+tr(inv.sigma.hat*Sigma.hat.teta4.teta3);
+T.hat[4][4]<-tr(Inv.Sigma.hat.teta4*Sigma.hat.teta4)+tr(inv.sigma.hat*Sigma.hat.teta4.teta4);
+T.hat[4][5]<-tr(Inv.Sigma.hat.teta5*Sigma.hat.teta4)+tr(inv.sigma.hat*Sigma.hat.teta4.teta5);
+T.hat[5][1]<-tr(Inv.Sigma.hat.teta1*Sigma.hat.teta5)+tr(inv.sigma.hat*Sigma.hat.teta5.teta1);
+T.hat[5][2]<-tr(Inv.Sigma.hat.teta2*Sigma.hat.teta5)+tr(inv.sigma.hat*Sigma.hat.teta5.teta2);
+T.hat[5][3]<-tr(Inv.Sigma.hat.teta3*Sigma.hat.teta5)+tr(inv.sigma.hat*Sigma.hat.teta5.teta3);
+T.hat[5][4]<-tr(Inv.Sigma.hat.teta4*Sigma.hat.teta5)+tr(inv.sigma.hat*Sigma.hat.teta5.teta4);
+T.hat[5][5]<-tr(Inv.Sigma.hat.teta5*Sigma.hat.teta5)+tr(inv.sigma.hat*Sigma.hat.teta5.teta5);
+
+
+
+
+
+
+
 #B.hat<-
 #C.hat<-
 #Q.hat<-
 #M.hat<-
 R.hat<-R.hat.f(n);
-V.hat<-V.hat,f(n);
+V.hat<-V.hat.f(n);
 #W.hat<-
-p.hat.teta1
-p.hat.teta2
-p.hat.teta3
-p.hat.teta4
-p.hat.teta5
 
-mu.hat.teta1
-mu.hat.teta2
-mu.hat.teta3
-mu.hat.teta4
-mu.hat.teta5
 
 
 inv.sigma.hat
@@ -322,7 +344,35 @@ X e Y
 
   
 #### Matrizes úteis na composição da matriz J.til e l.til.linha e U.linha.til
-#T.til<-
+#T.til
+T.til<-matrix(nrow=5,ncol=5);
+T.til[1][1]<-tr(Inv.Sigma.til.teta1*Sigma.til.teta1)+tr(inv.sigma.til*Sigma.til.teta1.teta1);
+T.til[1][2]<-tr(Inv.Sigma.til.teta2*Sigma.til.teta1)+tr(inv.sigma.til*Sigma.til.teta1.teta2);
+T.til[1][3]<-tr(Inv.Sigma.til.teta3*Sigma.til.teta1)+tr(inv.sigma.til*Sigma.til.teta1.teta3);
+T.til[1][4]<-tr(Inv.Sigma.til.teta4*Sigma.til.teta1)+tr(inv.sigma.til*Sigma.til.teta1.teta4);
+T.til[1][5]<-tr(Inv.Sigma.til.teta5*Sigma.til.teta1)+tr(inv.sigma.til*Sigma.til.teta1.teta5);
+T.til[2][1]<-tr(Inv.Sigma.til.teta1*Sigma.til.teta2)+tr(inv.sigma.til*Sigma.til.teta2.teta1);
+T.til[2][2]<-tr(Inv.Sigma.til.teta2*Sigma.til.teta2)+tr(inv.sigma.til*Sigma.til.teta2.teta2);
+T.til[2][3]<-tr(Inv.Sigma.til.teta3*Sigma.til.teta2)+tr(inv.sigma.til*Sigma.til.teta2.teta3);
+T.til[2][4]<-tr(Inv.Sigma.til.teta4*Sigma.til.teta2)+tr(inv.sigma.til*Sigma.til.teta2.teta4);
+T.til[2][5]<-tr(Inv.Sigma.til.teta5*Sigma.til.teta2)+tr(inv.sigma.til*Sigma.til.teta2.teta5);
+T.til[3][1]<-tr(Inv.Sigma.til.teta1*Sigma.til.teta3)+tr(inv.sigma.til*Sigma.til.teta3.teta1);
+T.til[3][2]<-tr(Inv.Sigma.til.teta2*Sigma.til.teta3)+tr(inv.sigma.til*Sigma.til.teta3.teta2);
+T.til[3][3]<-tr(Inv.Sigma.til.teta3*Sigma.til.teta3)+tr(inv.sigma.til*Sigma.til.teta3.teta3);
+T.til[3][4]<-tr(Inv.Sigma.til.teta4*Sigma.til.teta3)+tr(inv.sigma.til*Sigma.til.teta3.teta4);
+T.til[3][5]<-tr(Inv.Sigma.til.teta5*Sigma.til.teta3)+tr(inv.sigma.til*Sigma.til.teta3.teta5);
+T.til[4][1]<-tr(Inv.Sigma.til.teta1*Sigma.til.teta4)+tr(inv.sigma.til*Sigma.til.teta4.teta1);
+T.til[4][2]<-tr(Inv.Sigma.til.teta2*Sigma.til.teta4)+tr(inv.sigma.til*Sigma.til.teta4.teta2);
+T.til[4][3]<-tr(Inv.Sigma.til.teta3*Sigma.til.teta4)+tr(inv.sigma.til*Sigma.til.teta4.teta3);
+T.til[4][4]<-tr(Inv.Sigma.til.teta4*Sigma.til.teta4)+tr(inv.sigma.til*Sigma.til.teta4.teta4);
+T.til[4][5]<-tr(Inv.Sigma.til.teta5*Sigma.til.teta4)+tr(inv.sigma.til*Sigma.til.teta4.teta5);
+T.til[5][1]<-tr(Inv.Sigma.til.teta1*Sigma.til.teta5)+tr(inv.sigma.til*Sigma.til.teta5.teta1);
+T.til[5][2]<-tr(Inv.Sigma.til.teta2*Sigma.til.teta5)+tr(inv.sigma.til*Sigma.til.teta5.teta2);
+T.til[5][3]<-tr(Inv.Sigma.til.teta3*Sigma.til.teta5)+tr(inv.sigma.til*Sigma.til.teta5.teta3);
+T.til[5][4]<-tr(Inv.Sigma.til.teta4*Sigma.til.teta5)+tr(inv.sigma.til*Sigma.til.teta5.teta4);
+T.til[5][5]<-tr(Inv.Sigma.til.teta5*Sigma.til.teta5)+tr(inv.sigma.til*Sigma.til.teta5.teta5);
+
+
 #B.til<-
 #C.til<-
 #Q.til<-
@@ -331,12 +381,7 @@ R.til<-R.til.f(n);
 V.til<-V.til.f(n);
 #W.til<-
 
-inv.sigma.tile
 
-
-
-cbind(R.hat)
-  
 
 }
   
